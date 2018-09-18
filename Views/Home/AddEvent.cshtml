@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Добавление мероприятия";
+    Layout = "_Layout";
+}
+<h2>Заполните форму чтобы добавить мероприятие</h2>
+<form class="add-event-form" action="">
+
+    <label for="event-name">Наименование мероприятия:</label>
+    <input type="text" id="event-name" name="event-name">
+
+    <label for="event-date">Дата мероприятия:</label>
+    <input type="datetime" data-toggle="datepicker" id="event-date">
+    <i class="fas fa-plus" onclick="openModal()"></i>
+</form>
+<div id="modal">
+    <div id="modal-head"><h3>Добавление нового параметра мероприятия</h3></div>
+    <div id="modal-body">
+        <label for="new-param-name">Имя нового параметра</label>
+        <input type="text" id="new-param-name">
+    </div>
+    <div id="modal-foot">
+        <div>Принять</div>
+        <div onclick="hideModal()">Отмена</div>
+    </div>
+</div>
+<div id="overlay"></div>

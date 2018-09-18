@@ -35,3 +35,45 @@ body {
         display: none;
     }
 }
+.heading{
+    text-align: center;
+}
+.heading{
+    font-size: 1.5em;
+    color: darkblue;
+}
+.heading a:hover{
+    text-decoration: none;
+    color: dodgerblue;
+}
+#modal{
+    background: white;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top:50%;
+    left:50%;
+    z-index: 11;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#modal-foot{
+    display: flex;
+    justify-content: center;
+}
+#modal-foot div{
+    padding: 10px;
+}
+#modal-body{
+    text-align: center;
+}
+#overlay{
+    display: none;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
