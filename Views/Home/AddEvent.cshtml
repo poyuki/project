@@ -2,15 +2,24 @@
     ViewBag.Title = "Добавление мероприятия";
     Layout = "_Layout";
 }
+
+<div id="message"></div>
 <h2>Заполните форму чтобы добавить мероприятие</h2>
-<form class="add-event-form" action="">
-
-    <label for="event-name">Наименование мероприятия:</label>
-    <input type="text" id="event-name" name="event-name">
-
-    <label for="event-date">Дата мероприятия:</label>
-    <input type="datetime" data-toggle="datepicker" id="event-date">
+<form class="add-event-form" action="" onsubmit="submitForm(event)">
+    <div>
+        <label for="event-name">Наименование мероприятия:</label>
+        <input type="text" id="event-name" name="event-name">
+    </div>
+    <div>
+        <label for="event-date">Дата мероприятия:</label>
+        <input type="date" data-toggle="datepicker" id="event-date">
+    </div>
+    <div>
+        <label for="event-date">Время мероприятия:</label>
+        <input type="time"  id="event-time">
+    </div>
     <i class="fas fa-plus" onclick="openModal()"></i>
+    <button type="submit">Submit</button>
 </form>
 <div id="modal">
     <div id="modal-head"><h3>Добавление нового параметра мероприятия</h3></div>
@@ -19,7 +28,7 @@
         <input type="text" id="new-param-name">
     </div>
     <div id="modal-foot">
-        <div>Принять</div>
+        <div onclick="submitModal()">Принять</div>
         <div onclick="hideModal()">Отмена</div>
     </div>
 </div>

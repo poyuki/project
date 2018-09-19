@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using project.Models;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
 
 namespace project.Controllers
 {
@@ -38,6 +39,14 @@ namespace project.Controllers
         public IActionResult AddEvent()
         {
             return View();
+        }
+        
+        [HttpPost]
+        public JsonResult SubmiteEvent([FromBody] Event ev)
+        {
+            //dynamic answer = new JObject();
+            Console.WriteLine(ev);
+            return Json("succes");
         }
 
 
