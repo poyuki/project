@@ -124,3 +124,17 @@ form i:hover{
     background: darkgreen;
     
 }
+#message i{
+    cursor: pointer;
+}
+#message i:hover{
+    color: darkgoldenrod;
+}
+#message a{
+    text-decoration: underline;
+    color: gold;
+    
+}
+#message a:hover{
+    color: darkgoldenrod;
+}

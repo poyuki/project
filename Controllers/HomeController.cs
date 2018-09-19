@@ -42,11 +42,10 @@ namespace project.Controllers
         }
         
         [HttpPost]
-        public JsonResult SubmiteEvent([FromBody] Event ev)
+        public JObject SubmiteEvent(Event ev)
         {
-            //dynamic answer = new JObject();
-            Console.WriteLine(ev);
-            return Json("succes");
+            
+            return JObject.Parse(@"{successStatus:true}");
         }
 
 

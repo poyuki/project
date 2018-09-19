@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\Poyu\\Тест\\project\\project.csproj",
+    "projectUniqueName": "D:\\Test\\project.csproj",
     "projectName": "project",
-    "projectPath": "D:\\Poyu\\Тест\\project\\project.csproj",
-    "outputPath": "D:\\Poyu\\Тест\\project\\obj\\",
+    "projectPath": "D:\\Test\\project.csproj",
+    "outputPath": "D:\\Test\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

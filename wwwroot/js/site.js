@@ -36,10 +36,10 @@ function deleteParam(ev) {
 function submitForm(ev) {
     ev.preventDefault();
     let data={
-        eventName:$('#event-name').val(),
-        eventDate:$('#event-date').val(),
-        eventTime:$('#event-time').val(),
-        params:getParams()
+        EventName:$('#event-name').val(),
+        EeventDate:$('#event-date').val(),
+        EventTime:$('#event-time').val(),
+        Params:getParams()
     };
 
     $.ajax({
@@ -50,14 +50,14 @@ function submitForm(ev) {
         data: JSON.stringify(data),
         success: function (response) {
             let message=$('#message');
-            if (response === 'success') {
+            if (response.successStatus) {
                 message.addClass('success');
                 message.show();
-                message.html('<p>Мероприятеи успешнодобавленно! <a href="/">К расписанию</a></p>');
+                message.html('<p>Мероприятеи успешно добавленно! <a href="/">К расписанию</a></p>');
             }else {
                 message.addClass('error');
                 message.show();
-                message.html('<p>При добавлении мероприятия произошла ошибка!&nbsp;<i class="fas fa-times" aria-hidden="true"></i></p>');
+                message.html('<p>При добавлении мероприятия произошла ошибка!&nbsp;<i onclick="hideMessage()" class="fas fa-times" aria-hidden="true"></i></p>');
             }
         }
     });
@@ -74,4 +74,12 @@ function getParams() {
             res+=`${(elem.children('label')).text()}:${(elem.children('input')).val()};`
         }
     });
+}
+
+function hideMessage() {
+    let message=$('#message');
+    message.hide()
+        .empty()
+        .removeClass();
+    
 }
